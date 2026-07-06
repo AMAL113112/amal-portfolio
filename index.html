@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amal N V | Java Full Stack Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Sticky Profile Card -->
+    <div id="profileCard" class="profile-card">
+        <img src="images/profile.jpg" alt="Amal N V">
+
+        <div class="profile-info">
+            <h3>Amal N V</h3>
+            <p>Java Full Stack Developer</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-left">
+            <img src="images/profile.jpg" alt="Amal N V" class="hero-image">
+
+            <h1>Amal N V</h1>
+            <h2>Java Full Stack Developer</h2>
+
+            <div class="hero-links">
+                <a href="https://github.com/amal113112" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/amal-nv" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <span class="section-tag">ABOUT ME</span>
+
+            <h2>
+                Building scalable web applications with Java, Spring Boot and MySQL.
+            </h2>
+
+            <p>
+                I'm a Java Full Stack Developer specializing in backend development
+                with Java and Spring Boot. I build secure, scalable, and
+                database-driven applications using REST APIs, MySQL, JPA,
+                Hibernate, and modern web technologies. I enjoy transforming
+                real-world requirements into clean, efficient, and maintainable
+                software solutions.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#project" class="primary-btn">View Project</a>
+                <a href="#certificates" class="secondary-btn">Certificates</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="skills-card-section">
+
+        <div class="skills-card">
+            <h3>Core Skills</h3>
+
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <span>Backend</span>
+                    <p>Java, Spring Boot, REST API</p>
+                </div>
+
+                <div class="skill-box">
+                    <span>Database</span>
+                    <p>MySQL, MongoDB</p>
+                </div>
+
+                <div class="skill-box">
+                    <span>Tools</span>
+                    <p>Docker, Git, Postman</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Professional Training -->
+    <section class="training-section">
+
+        <span class="section-tag">PROFESSIONAL TRAINING</span>
+
+        <h2 class="section-title">Professional Training</h2>
+
+        <div class="training-card">
+
+            <h3>Java Spring Full Stack Development</h3>
+
+            <h4>Luminar Technolab | 2025 – 2026</h4>
+
+            <p>
+                Completed a 5-month intensive training program focused on
+                enterprise Java development, Spring Boot, RESTful API
+                development, database design, and full-stack web
+                application development.
+            </p>
+
+            <div class="training-tech">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>MySQL</span>
+                <span>Hibernate</span>
+                <span>JPA</span>
+                <span>Maven</span>
+                <span>Apache Tomcat</span>
+                <span>Git</span>
+                <span>REST APIs</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-section">
+
+        <span class="section-tag">TECH STACK</span>
+
+        <h2 class="section-title">Technologies & Tools</h2>
+
+        <div class="floating-tech">
+            <div class="tech java">☕ Java</div>
+            <div class="tech spring">🍃 Spring Boot</div>
+            <div class="tech mysql">🐬 MySQL</div>
+            <div class="tech git">🐙 Git</div>
+            <div class="tech html">🌐 HTML</div>
+            <div class="tech css">🎨 CSS</div>
+            <div class="tech js">⚡ JavaScript</div>
+            <div class="tech hibernate">⚙ Hibernate</div>
+            <div class="tech jpa">🔄 JPA</div>
+            <div class="tech rest">🔌 REST API</div>
+            <div class="tech maven">📦 Maven</div>
+            <div class="tech mongodb">🌿 MongoDB</div>
+            <div class="tech docker">🐳 Docker</div>
+            <div class="tech tomcat">🚀 Tomcat</div>
+            <div class="tech postman">📮 Postman</div>
+            <div class="tech eclipse">🌙 Eclipse</div>
+            <div class="tech vscode">🔷 VS Code</div>
+            <div class="tech sts">🍃 STS</div>
+            <div class="tech agile">🔄 Agile</div>
+            <div class="tech cicd">♾ CI/CD</div>
+            <div class="tech ai">🤖 AI</div>
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+<section id="project" class="project-section">
+
+    <span class="section-tag">FEATURED PROJECTS</span>
+    <h2 class="section-title">Projects</h2>
+
+    <!-- PROJECT 1 -->
+    <div class="project-container" style="margin-bottom:100px;">
+
+        <div class="project-image">
+            <div class="slider-container">
+
+                <button class="slider-btn prev" onclick="prevProject1()">
+                    ❮
+                </button>
+
+                <img id="project1Image"
+                    src="images/project1/1.png"
+                    alt="Smart Clinic Screenshot">
+
+                <button class="slider-btn next" onclick="nextProject1()">
+                    ❯
+                </button>
+
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <h3>Smart Clinic Management System</h3>
+
+            
+                <p>
+                    A full-stack hospital management system built using Java, Spring Boot,
+                    MySQL, MongoDB, JPA, Hibernate, and Docker. The application streamlines
+                    the management of doctors, patients, appointments, prescriptions, and
+                    medical records through a secure, scalable, and containerized
+                    architecture.
+                </p>
+
+                <ul>
+                    <li>Designed normalized relational schema with 10+ tables</li>
+                    <li>Built REST APIs for appointment and prescription workflow</li>
+                    <li>Implemented role-based authentication for Admin, Doctor, and Patient</li>
+                    <li>Integrated MySQL and MongoDB for relational and document-based data storage</li>
+                    <li>Containerized the application using Docker for consistent deployment</li>
+                    <li>Developed as the capstone project for the IBM Java Development Professional Certificate (Coursera)</li>
+                </ul>
+
+                <div class="project-tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Data JPA</span>
+                    <span>Hibernate</span>
+                    <span>MySQL</span>
+                    <span>MongoDB</span>
+                    <span>REST API</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Maven</span>
+                    <span>Docker</span>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-container">
+
+        <div class="project-image">
+            <div class="slider-container">
+
+                <button class="slider-btn prev" onclick="prevSlide()">
+                    ❮
+                </button>
+
+                <img id="sliderImage"
+                    src="images/project2/1.png"
+                    alt="E-Commerce Screenshot">
+
+                <button class="slider-btn next" onclick="nextSlide()">
+                    ❯
+                </button>
+
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <h3>Spring Boot E-Commerce Application</h3>
+
+            <p>
+                A full-stack e-commerce application developed using Java, Spring Boot, Spring Data JPA, 
+                Hibernate, MySQL, HTML, CSS, and Thymeleaf. The application is designed specifically for 
+                smartphone retail, allowing customers to browse, purchase, and track mobile devices through
+                a secure and user-friendly platform.
+            </p>
+
+            <ul>
+                <li>User Authentication & Authorization</li>
+                <li>Phone Catalog & Product Management</li>
+                <li>Shopping Cart and Order Management</li>
+                <li>Order Tracking (Order Status Updates)</li>
+                <li>Payment Options (Cash on Delivery & Google Pay)</li>
+                <li>Admin Dashboard for Product and Order Management</li>
+                <li>CRUD Operations with Spring Data JPA & Hibernate</li>
+                <li>MySQL Database Integration</li>      
+            </ul>
+
+            <div class="project-tags">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Spring Data JPA</span>
+                <span>Hibernate</span>
+                <span>MySQL</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Thymeleaf</span>
+                <span>Maven</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-container" style="margin-top:100px;">
+
+        <div class="project-image">
+            <div class="slider-container">
+
+                <button class="slider-btn prev" onclick="prevProject3()">
+                    ❮
+                </button>
+
+                <img id="project3Image"
+                    src="images/project3/1.png"
+                    alt="Election Campaign Vehicle Management System">
+
+                <button class="slider-btn next" onclick="nextProject3()">
+                    ❯
+                </button>
+
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <h3>Election Campaign Vehicle Management System</h3>
+
+            <p>
+                A web-based Election Campaign Vehicle Management System developed
+                using Java, JSP, JDBC, MySQL and Apache Tomcat to streamline
+                vehicle submission, document verification and approval for
+                election duty.
+
+                Vehicle owners can register, upload vehicle documents and submit
+                approval requests, while administrators verify documents,
+                approve or reject requests, manage vehicles, monitor payments
+                and track vehicle usage.
+            </p>
+
+            <ul>
+                <li>User Registration & Login</li>
+                <li>Vehicle Registration & Document Upload</li>
+                <li>Admin Verification & Approval Workflow</li>
+                <li>Vehicle Status Tracking</li>
+                <li>Payment Management</li>
+                <li>Location Tracking</li>
+            </ul>
+
+            <div class="project-tags">
+                <span>Java</span>
+                <span>JSP</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>MySQL</span>
+                <span>JDBC</span>
+                <span>Apache Tomcat</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Certificates -->
+    <section id="certificates" class="certificates-section">
+
+        <span class="section-tag">CERTIFICATES</span>
+
+        <h2 class="section-title">Continuous Learning</h2>
+
+        <div class="certificate-list">
+
+            <div class="certificate-item">
+                Java Spring Full Stack Development — Luminar Technolab
+            </div>
+
+            <div class="certificate-item">
+                Java Development Capstone Project (Smart Clinic Management System) — IBM / Coursera
+            </div>
+
+            <div class="certificate-item">
+                Java Certificate of Accomplishment — HackerRank
+            </div>
+
+            <div class="certificate-item">
+                Introduction to DevOps — IBM
+            </div>
+
+            <div class="certificate-item">
+                Java Spring Full Stack Development — NACTET
+            </div>
+
+            <div class="certificate-item">
+                Generative AI — LinkedIn Learning
+            </div>
+
+        </div>
+
+        <a href="https://www.linkedin.com/in/amal-nv/details/certifications/"
+            target="_blank"
+            class="certificate-btn">
+            View All Certificates
+        </a>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+
+        <span class="section-tag">CONTACT</span>
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <div class="contact-buttons">
+
+            <a href="mailto:amalal113112@gmail.com"
+                class="contact-btn email-btn">
+                📧 Email Me
+            </a>
+
+            <a href="https://github.com/amal113112"
+                target="_blank"
+                class="contact-btn github-btn">
+                🐱 GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/amal-nv"
+                target="_blank"
+                class="contact-btn linkedin-btn">
+                💼 LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- IMAGE ZOOM MODAL -->
+    <div id="zoomModal" class="zoom-modal">
+        <img id="zoomedImage" src="" alt="Zoomed Image">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
