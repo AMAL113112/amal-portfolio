@@ -265,4 +265,219 @@ if (zoomModal) {
     });
 }
 
+// ===============================
+// SECTION SUMMARY
+// ===============================
+
+const summaryTitle = document.getElementById("summaryTitle");
+const summaryText = document.getElementById("summaryText");
+const summaryPanel = document.getElementById("summaryPanel");
+
+const sectionData = {
+
+    about: {
+        title: "Welcome",
+        text: "Welcome to my portfolio. I'm Amal N V, a Java Full Stack Developer passionate about building secure, scalable, and database-driven web applications using modern Java technologies."
+    },
+
+    training: {
+        title: "Professional Training",
+        text: "This is where my passion for Java turned into practical experience through building real-world applications and solving real development challenges."
+    },
+
+    tech: {
+        title: "Technologies & Tools",
+        text: "The technologies and tools I use daily to design, develop, test, and deploy modern full-stack applications, from backend development to containerized deployment."
+    },
+
+    projects: {
+        title: "Projects",
+        text: "A collection of real-world applications demonstrating my experience in backend development, REST APIs, authentication, database management, Docker, and full-stack software engineering."
+    },
+
+    certificates: {
+        title: "Certificates",
+        text: "Professional certifications earned through continuous learning, hands-on projects, and technical training to strengthen my software development skills."
+    },
+
+    contact: {
+        title: "Let's Connect",
+        text: "Thank you for visiting my portfolio. If you're looking for a Java Full Stack Developer who enjoys solving real-world problems and continuously learning, I'd be happy to connect."
+    }
+
+};
+
+function changeSummary(section){
+
+    if(!sectionData[section]) return;
+
+    summaryPanel.classList.add("fade");
+
+    setTimeout(() => {
+
+        summaryTitle.textContent = sectionData[section].title;
+        summaryText.textContent = sectionData[section].text;
+
+        summaryPanel.classList.remove("fade");
+
+    },180);
+
+}
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            changeSummary(entry.target.id);
+
+        }
+
+    });
+
+},{
+    threshold:0.45
+});
+
+[
+    "about",
+    "training",
+    "tech",
+    "projects",
+    "certificates",
+    "contact"
+].forEach(id=>{
+
+    const section = document.getElementById(id);
+
+    if(section){
+        observer.observe(section);
+    }
+
+});
+
+
+// ===============================
+// HIDE SUMMARY DURING PROJECTS
+// ===============================
+
+const projectsSection = document.getElementById("projects");
+
+if(projectsSection){
+
+    const projectObserver = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                summaryPanel.style.opacity = "0";
+                summaryPanel.style.pointerEvents = "none";
+
+            }else{
+
+                summaryPanel.style.opacity = "1";
+                summaryPanel.style.pointerEvents = "auto";
+
+            }
+
+        });
+
+    },{
+
+        threshold:0.15
+
+    });
+
+    projectObserver.observe(projectsSection);
+
+}
+
 console.log("Portfolio Loaded Successfully");
+
+// ===============================
+// LED SCROLL PROGRESS
+// ===============================
+
+const ledContainer = document.getElementById("ledContainer");
+const progressPercent = document.getElementById("progressPercent");
+
+const LED_COUNT = 50;
+
+if (ledContainer && progressPercent) {
+
+    // Create LEDs
+    for (let i = 0; i < LED_COUNT; i++) {
+
+        const led = document.createElement("div");
+        led.className = "led";
+
+        ledContainer.appendChild(led);
+
+    }
+
+    const leds = ledContainer.querySelectorAll(".led");
+
+    function updateProgress() {
+
+        const scrollTop = window.scrollY;
+
+        const pageHeight =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        const percent = Math.max(
+            0,
+            Math.min(
+                100,
+                (scrollTop / pageHeight) * 100
+            )
+        );
+
+        progressPercent.textContent =
+            Math.round(percent) + "%";
+
+        const active =
+            Math.floor((percent / 100) * LED_COUNT);
+
+        leds.forEach((led, index) => {
+
+            if (index < active) {
+
+                led.classList.add("active");
+
+            } else {
+
+                led.classList.remove("active");
+
+            }
+
+        });
+
+    }
+
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+
+        if (!ticking) {
+
+            requestAnimationFrame(() => {
+
+                updateProgress();
+
+                ticking = false;
+
+            });
+
+            ticking = true;
+
+        }
+
+    });
+
+    // Initialize progress on page load
+    updateProgress();
+
+}
