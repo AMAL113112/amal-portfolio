@@ -282,27 +282,32 @@ const sectionData = {
 
     training: {
         title: "Professional Training",
-        text: "This is where my passion for Java turned into practical experience through building real-world applications and solving real development challenges."
+        text: "Completed an intensive Java Spring Full Stack Development program, gaining practical experience in enterprise Java, Spring Boot, REST APIs, MySQL, JPA, Hibernate, Maven, Git, and full-stack application development."
+    },
+
+    experience: {
+        title: "Industry Experience",
+        text: "The JPMorgan Chase Software Engineering Job Simulation allowed me to move beyond personal projects and gain hands-on experience with enterprise backend development practices."
     },
 
     tech: {
         title: "Technologies & Tools",
-        text: "The technologies and tools I use daily to design, develop, test, and deploy modern full-stack applications, from backend development to containerized deployment."
+        text: "A collection of technologies, frameworks, databases, and development tools I use to design, build, test, and deploy scalable full-stack applications."
     },
 
     projects: {
         title: "Projects",
-        text: "A collection of real-world applications demonstrating my experience in backend development, REST APIs, authentication, database management, Docker, and full-stack software engineering."
+        text: "Real-world software projects showcasing my experience in Java backend development, REST APIs, authentication, database design, Docker, and full-stack engineering."
     },
 
     certificates: {
         title: "Certificates",
-        text: "Professional certifications earned through continuous learning, hands-on projects, and technical training to strengthen my software development skills."
+        text: "Professional certifications earned through continuous learning, technical training, and hands-on software development experience."
     },
 
     contact: {
         title: "Let's Connect",
-        text: "Thank you for visiting my portfolio. If you're looking for a Java Full Stack Developer who enjoys solving real-world problems and continuously learning, I'd be happy to connect."
+        text: "Thank you for visiting my portfolio. If you're looking for a Java Full Stack Developer with a passion for building reliable software and continuously improving, I'd be happy to connect."
     }
 
 };
@@ -343,15 +348,16 @@ const observer = new IntersectionObserver((entries)=>{
 [
     "about",
     "training",
+    "experience",
     "tech",
     "projects",
     "certificates",
     "contact"
-].forEach(id=>{
+].forEach(id => {
 
     const section = document.getElementById(id);
 
-    if(section){
+    if (section) {
         observer.observe(section);
     }
 
