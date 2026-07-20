@@ -629,17 +629,89 @@ Skill Card Section
    MOBILE
 =================================== */
 
-@media(max-width:900px){
+@media (max-width:600px){
 
-    .summary-panel{
-
-        left:15px;
-        right:15px;
-        bottom:15px;
-
-        width:auto;
+    .hero-links a,
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+        text-align:center;
     }
 
+    .hero-buttons{
+        .hero-links{
+        gap:10px;
+    }
+
+    .hero-links{
+        flex-direction:column;
+    }
+
+    .project-content ul{
+        margin-left:18px;
+    }
+
+    .tech{
+        padding:12px 18px;
+        font-size:.9rem;
+    }
+
+    .slider-container img{
+        object-fit:contain;
+    }
+
+    section{
+        padding:60px 18px;
+    }
+
+    .hero-image{
+        width:180px;
+        height:180px;
+    }
+
+    .hero-left h1{
+        font-size:2rem;
+    }
+
+    .hero-right h2{
+        font-size:2rem;
+        line-height:1.2;
+    }
+
+    .section-title{
+        font-size:1.8rem;
+        margin-bottom:40px;
+    }
+
+    .training-card,
+    .certificate-item,
+    .skills-card{
+        padding:22px;
+    }
+
+    .training-card h3,
+    .project-content h3{
+        font-size:1.5rem;
+    }
+
+    .project-tags,
+    .training-tech{
+        justify-content:center;
+    }
+
+    .slider-btn{
+        width:42px;
+        height:42px;
+        font-size:20px;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+    }
+
+    .contact-btn{
+        width:100%;
+    }
 }
 
 /* ==========================
